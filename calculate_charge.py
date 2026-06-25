@@ -10,14 +10,15 @@ from rdkit.Chem import GetPeriodicTable
 #--------------------------------------------------------------------------#
 #--------------------------------------------------------------------------#
 INPUT     = 'archivo0001.outwfn'  # insertar aquí el archivo .outwfn
-DIRINPUT  = './'                  # insertar aquí la ruta del archivo
+DIRINPUT  = './'                  # insertar aquí la ruta al archivo
+DIRMODELS = './'                  # insertar aquí la ruta a los modelos
 DIROUTPUT = './'                  # insertar aquí la ruta de la salida 
 #--------------------------------------------------------------------------#
 #--------------------------------------------------------------------------#
 model_paths = {
-        'C': 'MODELS_definitivos/C_model.pth',
-        'H': 'MODELS_definitivos/H_model.pth',
-        'O': 'MODELS_definitivos/O_model.pth'
+        'C': os.path.join(DIRMODELS, 'C_model.pth'),
+        'H': os.path.join(DIRMODELS, 'H_model.pth'),
+        'O': os.path.join(DIRMODELS, 'O_model.pth')
         }
 #--------------------------------------------------------------------------#
 architectures = {
